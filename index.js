@@ -16,7 +16,8 @@ genreidlist.forEach(  async genre=> {
   genreidforeachmovie=movieAccordingTognreId+genre.id;
   
   genreforeachmovie=await(await(await fetch(genreidforeachmovie)).json()).results;
- genremovienames();
+ console.log(genreforeachmovie);
+  genremovienames();
   genremovies();
   
  function genremovienames() {
@@ -30,9 +31,7 @@ genreidlist.forEach(  async genre=> {
   moviesection.appendChild(moviename);
  }
 async function genremovies() {
-
-
-  section = document.createElement("div");
+section = document.createElement("div");
 section.style.display='flex';
 section.style.flexDirection='row';
 section.style.overflow='auto';
