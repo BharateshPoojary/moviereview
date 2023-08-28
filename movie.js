@@ -8,20 +8,21 @@ const movieAccordingTognreId="https://api.themoviedb.org/3/discover/movie?api_ke
            
 window.addEventListener("load",async ()=>{
  let genreidlist = await (await (await fetch(gnreIdListApi)).json()).genres;
-console.log(genreidlist);
+// console.log(genreidlist);
 
 
 genreidlist.forEach(  async genre=> {
  let genrenameformovie=[];
   
   genrenameformovie=genre.name;
-   genreidforeachmovie=movieAccordingTognreId+genre.id;
+   let genreidforeachmovie=movieAccordingTognreId+genre.id;
+  //  console.log(genreidforeachmovie);
   let genreforeachmovie=[];
 
   genreforeachmovie=await(await(await fetch(genreidforeachmovie)).json()).results;
 
 
-  console.log(genreforeachmovie);
+  // console.log(genreforeachmovie);
  let moviesection = document.createElement("div");
   moviesection.style.display='flex';
   moviesection.style.flexDirection='row';
@@ -30,7 +31,8 @@ genreidlist.forEach(  async genre=> {
   let moviename=document.createElement('h3');
   moviename.innerHTML=genrenameformovie;
   moviesection.appendChild(moviename);
-section = document.createElement("div");
+
+let section = document.createElement("div");
 section.style.display='flex';
 section.style.flexDirection='row';
 section.style.overflow='scroll';
@@ -38,9 +40,9 @@ document.body.appendChild(section);
 
 genreforeachmovie.forEach(results=>{ 
   let posterPath=results.poster_path;
-  console.log(posterPath);
- fullposterpath=halfImagePath+posterPath; 
-console.log(fullposterpath);
+  // console.log(posterPath);
+ let fullposterpath=halfImagePath+posterPath; 
+// console.log(fullposterpath);
   let atag=document.createElement('a');
   atag.href="movieinfo.html";
   let poster=document.createElement("img");
@@ -51,30 +53,42 @@ console.log(fullposterpath);
   poster.style.borderRadius="21px";
   atag.appendChild(poster);
   section.appendChild(atag);
-  
+ 
 
 function movieinformation() {  
   title=results.title;
-  console.log(title);
+  // console.log(title);
   overview=results.overview;
-  console.log(overview);
+  // console.log(overview);
   release_date=results.release_date;
   ratings=results.vote_average;
 
   let postersrc=results.poster_path;
-  console.log(postersrc);
+  // console.log(postersrc);
  let fullpostersource=halfImagePath+postersrc; 
-console.log(fullpostersource);
+// console.log(fullpostersource);
   let moviedetails={'overview':overview,'title':title,'poster':fullpostersource,'release_date':release_date,'ratings':ratings};
   localStorage.setItem('moviedetails',JSON.stringify(moviedetails));
 }
 poster.addEventListener('click',movieinformation);
 });
+let showmorebutton = document.createElement("button");
+showmorebutton.textContent="Showmore";
+showmorebutton.style.height="50px";
+showmorebutton.style.margin="48px 10px 5px 5px ";
+showmorebutton.style.padding="18px 25px 25px 25px ";
+showmorebutton.style.borderRadius="50px";
+section.appendChild(showmorebutton);
 
-});  
+showmorebutton.addEventListener("click",async ()=>{
+  window.location.href="showmore.html";
+let showmoreaccordingtogenreid=genre.id;
+console.log(showmoreaccordingtogenreid);
+localStorage.setItem('showmovieaccordingtogenreid',JSON.stringify(showmoreaccordingtogenreid));
 
-});
 
+  
+  });
+  });
 
-
-
+}); 
