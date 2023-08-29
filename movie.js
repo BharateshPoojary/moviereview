@@ -7,6 +7,76 @@ const movieAccordingTognreId="https://api.themoviedb.org/3/discover/movie?api_ke
 
            
 window.addEventListener("load",async ()=>{
+  let popularmovieslist=await(await(await fetch(popularmovies)).json()).results;
+  console.log(popularmovieslist);
+  let moviesection = document.createElement("div");
+  moviesection.style.display='flex';
+  moviesection.style.flexDirection='row';
+  document.body.appendChild(moviesection);
+
+  let moviename=document.createElement('h3');
+  moviename.innerHTML="Popular Movies";
+  moviesection.appendChild(moviename);
+  let section = document.createElement("div");
+section.id="postercontainer";
+section.style.display='flex';
+section.style.flexDirection='row';
+section.style.overflow='scroll';
+document.body.appendChild(section); 
+  popularmovieslist.forEach(results=>{
+    let posterPath=results.poster_path;
+    // console.log(posterPath);
+   let fullposterpath=halfImagePath+posterPath; 
+  // console.log(fullposterpath);
+    let atag=document.createElement('a');
+    atag.href="movieinfo.html";
+    let poster=document.createElement("img");
+    poster.src=fullposterpath;
+    poster.height="180";
+    poster.width="140";
+    poster.style.marginLeft="4px";
+    poster.style.borderRadius="21px";
+    atag.appendChild(poster);
+    section.appendChild(atag);
+
+    
+
+function movieinformation() {  
+  title=results.title;
+  // console.log(title);
+  overview=results.overview;
+  // console.log(overview);
+  release_date=results.release_date;
+  ratings=results.vote_average;
+
+  let postersrc=results.poster_path;
+  // console.log(postersrc);
+ let fullpostersource=halfImagePath+postersrc; 
+// console.log(fullpostersource);
+  let popularmoviedetails={'overview':overview,'title':title,'poster':fullpostersource,'release_date':release_date,'ratings':ratings};
+  localStorage.setItem('moviedetails',JSON.stringify(popularmoviedetails));
+}
+poster.addEventListener('click',movieinformation);
+  })
+  let popularshowmorebutton = document.createElement("button");
+popularshowmorebutton.textContent="Showmore";
+popularshowmorebutton.style.height="50px";
+popularshowmorebutton.style.margin="48px 10px 5px 5px ";
+popularshowmorebutton.style.padding="18px 25px 25px 25px ";
+popularshowmorebutton.style.borderRadius="50px";
+section.appendChild(popularshowmorebutton);
+
+popularshowmorebutton.addEventListener("click",()=>{
+  window.location.href="showmore.html";
+let showmoreaccordingtogenreid="popularmoviessection";
+localStorage.setItem('showmovieaccordingtogenreid',JSON.stringify(showmoreaccordingtogenreid));
+
+
+  
+  });
+
+
+  // console.log(popularmovieslist);
  let genreidlist = await (await (await fetch(gnreIdListApi)).json()).genres;
 // console.log(genreidlist);
 
@@ -33,6 +103,7 @@ genreidlist.forEach(  async genre=> {
   moviesection.appendChild(moviename);
 
 let section = document.createElement("div");
+section.id="postercontainer";
 section.style.display='flex';
 section.style.flexDirection='row';
 section.style.overflow='scroll';
@@ -80,7 +151,7 @@ showmorebutton.style.padding="18px 25px 25px 25px ";
 showmorebutton.style.borderRadius="50px";
 section.appendChild(showmorebutton);
 
-showmorebutton.addEventListener("click",async ()=>{
+showmorebutton.addEventListener("click",()=>{
   window.location.href="showmore.html";
 let showmoreaccordingtogenreid=genre.id;
 console.log(showmoreaccordingtogenreid);
