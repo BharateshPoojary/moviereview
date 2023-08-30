@@ -8,7 +8,7 @@ const movieAccordingTognreId="https://api.themoviedb.org/3/discover/movie?api_ke
            
 window.addEventListener("load",async ()=>{
   let popularmovieslist=await(await(await fetch(popularmovies)).json()).results;
-  console.log(popularmovieslist);
+  // console.log(popularmovieslist);
   let moviesection = document.createElement("div");
   moviesection.style.display='flex';
   moviesection.style.flexDirection='row';
@@ -161,5 +161,5 @@ localStorage.setItem('showmovieaccordingtogenreid',JSON.stringify(showmoreaccord
   
   });
   });
-
+  
 }); 

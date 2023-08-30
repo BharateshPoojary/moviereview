@@ -25,3 +25,61 @@ a{
     color: black;
     text-decoration: none;
 }
+.trailerbutton{
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: black;
+    height: 80px;
+    width: 140px;
+    margin-top: 50px;
+    margin-left: 20px;
+    padding: 70px 0px 30px 0px;
+    background-image: url(youtube.png);
+    background-repeat: no-repeat;
+    background-position:center top;
+    background-color: white;
+    background-size: 50px;
+    padding:30px 5px 0px 0px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.musicbutton{
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: black;
+    height: 80px;
+    width: 140px;
+    margin-top: 50px;
+    margin-left: 160px;
+    padding: 80px 0px 30px 0px;
+    background-image: url(ytmusic.png);
+    background-repeat: no-repeat;
+    background-position:center top;
+    background-color: white;
+    background-size: 45px;
+    padding:30px 5px 0px 0px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+.reviewbutton{
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: black;
+    height: 80px;
+    width: 140px;
+    margin-top: 50px;
+    margin-left: 160px;
+    padding: 80px 0px 30px 0px;
+    background-image: url(youtubereview.png);
+    background-repeat: no-repeat;
+    background-position:center top;
+    background-color: white;
+    background-size: 70px;
+    padding:30px 5px 0px 0px;
+    cursor: pointer;
+    border-radius: 50px;
+}
