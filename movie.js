@@ -31,6 +31,7 @@ document.body.appendChild(section);
     let atag=document.createElement('a');
     atag.href="movieinfo.html";
     let poster=document.createElement("img");
+  
     poster.src=fullposterpath;
     poster.height="180";
     poster.width="140";
@@ -61,8 +62,9 @@ poster.addEventListener('click',movieinformation);
   let popularshowmorebutton = document.createElement("button");
 popularshowmorebutton.textContent="Showmore";
 popularshowmorebutton.style.height="50px";
+popularshowmorebutton.style.fontSize="larger";
 popularshowmorebutton.style.margin="48px 10px 5px 5px ";
-popularshowmorebutton.style.padding="18px 25px 25px 25px ";
+popularshowmorebutton.style.padding="10px 25px 25px 25px ";
 popularshowmorebutton.style.borderRadius="50px";
 section.appendChild(popularshowmorebutton);
 
@@ -146,8 +148,9 @@ poster.addEventListener('click',movieinformation);
 let showmorebutton = document.createElement("button");
 showmorebutton.textContent="Showmore";
 showmorebutton.style.height="50px";
+showmorebutton.style.fontSize="larger";
 showmorebutton.style.margin="48px 10px 5px 5px ";
-showmorebutton.style.padding="18px 25px 25px 25px ";
+showmorebutton.style.padding="10px 25px 25px 25px ";
 showmorebutton.style.borderRadius="50px";
 section.appendChild(showmorebutton);
 

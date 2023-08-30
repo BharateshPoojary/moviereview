@@ -43,9 +43,20 @@ a{
     padding:30px 5px 0px 0px;
     cursor: pointer;
     border-radius: 50px;
+    border: 2px solid rgb(51, 196, 51);
+
 }
 
+ button:hover{
+    width:150px;
+    height: 90px;
+    transition: all 150ms ;
+    box-shadow: 5px 2px 10px black;
+ }
+
+
 .musicbutton{
+    border: 2px solid rgb(51, 196, 51);
     font-size: large;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
@@ -65,6 +76,7 @@ a{
     border-radius: 50px;
 }
 .reviewbutton{
+    border: 2px solid rgb(51, 196, 51);
     font-size: large;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;

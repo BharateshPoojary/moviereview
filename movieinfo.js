@@ -50,7 +50,7 @@ moviedetailssection.appendChild(writtendetailssection);
 document.body.appendChild(moviedetailssection);
 let movietitle=moviedetails.title;
 
-let youtubeapikey="AIzaSyAQclpnRwSSLKCddW6gZVLxDMhG-BQp7Q0";
+let youtubeapikey="AIzaSyAhW1eLNh8QnuzvpMiUjjUCwL81LZETSUQ";
   let cloudconsoleyoutubetrailerfetchinglink="https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxresults=1&q="+movietitle+"Trailer"+"&key="+youtubeapikey;
   
     let cloudconsoleyoutubetrailerfetching=await (await fetch( cloudconsoleyoutubetrailerfetchinglink)).json();

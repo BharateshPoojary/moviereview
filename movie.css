@@ -24,9 +24,24 @@ a{
     color: black;
     text-decoration: none;
 }
-
+img:hover{
+    width:150px;
+    height: 190px;
+    transition: all 150ms ;
+    box-shadow: 5px 2px 10px black;
+}
+button{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(51, 196, 51);
+}
+ button:hover{
+    box-shadow: 5px 2px 10px black;
+ }
 
 #postercontainer::-webkit-scrollbar{
     display: none;
 }
+
 
