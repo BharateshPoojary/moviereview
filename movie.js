@@ -7,18 +7,7 @@ const movieAccordingTognreId="https://api.themoviedb.org/3/discover/movie?api_ke
 
            
 window.addEventListener("load",async ()=>{
-let navbar=document.createElement('nav');
-document.body.appendChild(navbar);
-let ulist=document.createElement('ul');
-navbar.appendChild(ulist);
-let list=document.createElement('li');
-// list.innerHTML="Signin";
-let signin=document.createElement('a');
-signin.id="sign";
-signin.innerHTML="Signin";
-signin.href="signin.html";
-list.appendChild(signin);
-ulist.appendChild(list);
+
 
   let divofhoveringimages=document.createElement('div');
   divofhoveringimages.id="imagemoving";
