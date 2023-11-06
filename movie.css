@@ -2,7 +2,7 @@
 
 body{
     margin: 0px;
-    background-image: linear-gradient( to right, rgb(173, 233, 170),rgb(5, 124, 49));
+    background: white;
     overflow: scroll;
 }
 body::-webkit-scrollbar{
@@ -14,7 +14,7 @@ nav{
     border-bottom:5px solid white;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-image: linear-gradient(to top, rgb(12, 59, 9),rgb(41, 206, 19));
+    background: linear-gradient(to top, rgb(4, 14, 3),rgb(242, 245, 241));
 }
 .navbar-brand{
     color: white;
