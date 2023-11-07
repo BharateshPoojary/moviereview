@@ -62,7 +62,7 @@ a{
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    animation: slide 35s linear infinite;
+    animation: slide 25s linear infinite;
 }
 
 @keyframes slide {
@@ -70,7 +70,7 @@ a{
         margin-left: 100%;
     }
     100%{
-        margin-left: -210%;
+        margin-left: -280%;
     }
 }
 #image1:hover{
