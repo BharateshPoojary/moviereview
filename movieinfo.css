@@ -192,6 +192,10 @@ li{
     width: auto;
 }
 #title{
+    inline-size: 200px;
+    white-space: wrap;
+     /* word-wrap: break-word; */
+     overflow-wrap: break-word;
     font-size: medium;
 }
 #story{
