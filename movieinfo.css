@@ -185,10 +185,18 @@ li{
    margin-left: 10px;
 }
 #poster{
-    height: 130px;
-    width:130px;
+    height: 140px;
+    width:150px;
+}
+#moviedetails{
+    width: auto;
 }
 #story{
-    width:auto;
+    padding: 10px;
+    margin: 15px;
+}
+.trailerbutton{
+    height:30px;
+    width:50px;
 }
 }
