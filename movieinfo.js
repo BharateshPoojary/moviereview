@@ -38,6 +38,7 @@ window.addEventListener("load",async()=>{
   writtendetailssection.style.display="flex";
   writtendetailssection.style.flexDirection="column";
   writtendetailssection.style.padding="0";
+  writtendetailssection.style.marginLeft="5px"
 
   let title=document.createElement('h2');
   title.id="title";
