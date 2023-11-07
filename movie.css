@@ -37,7 +37,7 @@ li{
 
 }
 .navbar-toggler:hover{
-    box-shadow: 5px 4px 10px rgb(202, 197, 197);
+    box-shadow: 5px 4px 10px rgb(255, 255, 255);
 }
 li:hover{
     box-shadow: 5px 2px 10px rgb(202, 197, 197);
@@ -127,6 +127,21 @@ button{
 
 #postercontainer::-webkit-scrollbar{
     display: none;
+}
+@media screen and (max-width:700px) {
+
+.container-fluid{
+    position: absolute;
+    top:0px;
+
+}
+.sidebutton{
+    position: absolute;
+    margin-top: 20px;
+}
+.navbar-brand{
+    font-size: 100px;
+}
 }
 
 

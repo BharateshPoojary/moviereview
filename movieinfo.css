@@ -64,7 +64,7 @@ ul{
     list-style: none ;
     justify-content: right;
     display: flex; 
-    padding-right: 4rem; 
+    padding-right: 1rem; 
     text-decoration: none; 
 
 }
@@ -166,4 +166,29 @@ a{
     padding:30px 5px 0px 0px;
     cursor: pointer;
     border-radius: 50px;
+}
+@media screen and (max-width:700px) {
+nav{
+    height: 87px;
+    width: auto;
+}
+    ul{
+        position: absolute;
+        right:0;
+        top:0;
+    padding: 0;
+  
+}
+li{
+
+ padding: 10px;
+   margin-left: 10px;
+}
+#poster{
+    height: 130px;
+    width:130px;
+}
+#story{
+    width:auto;
+}
 }
