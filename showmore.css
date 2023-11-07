@@ -1,6 +1,7 @@
 body{
     margin: 0px;
-    background-image: linear-gradient( to right, rgb(173, 233, 170),rgb(5, 124, 49));
+    padding: 0px;
+    background:white;
     overflow: scroll;
 }
 body::-webkit-scrollbar{
@@ -12,7 +13,7 @@ nav{
     padding-top: 15px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-image: linear-gradient(to top, rgb(12, 59, 9),rgb(41, 206, 19));
+    background:linear-gradient(to top, rgb(4, 14, 3),rgb(242, 245, 241)); 
 }
 ul{
     list-style: none ;
@@ -28,9 +29,12 @@ li{
     margin-top: 40px;
     border: 2px solid black;
     border-radius: 50px;
-    border-color: aqua;
+    border-color: rgb(62, 62, 62);
     padding: 20px;
     margin-left: 60px;
+}
+li:hover{
+    transform: scale(1.1);
 }
 a{
     font-family:Calibri;
@@ -54,8 +58,9 @@ a{
      padding-bottom: 10px; 
 }
 #poster:hover{
-    width:150px;
-    height: 190px;
+    /* width:150px;
+    height: 190px; */
+    transform: scale(1.1);
     transition: all 150ms ;
     box-shadow: 5px 2px 10px black;
 }

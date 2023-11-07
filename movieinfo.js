@@ -29,14 +29,15 @@ window.addEventListener("load",async()=>{
   let poster=document.createElement('img');
   poster.id="poster";
   poster.src=moviedetails.poster;
-  poster.height="300";
-  poster.width="250";
+  poster.height="220";
+  poster.width="170";
   poster.style.borderRadius="21px";
   moviedetailssection.appendChild(poster);
 
   let writtendetailssection=document.createElement('div');
   writtendetailssection.style.display="flex";
   writtendetailssection.style.flexDirection="column";
+  writtendetailssection.style.padding="0"
 
   let title=document.createElement('h2');
   title.id="title";
@@ -46,27 +47,30 @@ window.addEventListener("load",async()=>{
   title.style.fontFamily="Calibri";
   writtendetailssection.appendChild(title);
 
-  let release_date=document.createElement('h2');
+  let release_date=document.createElement('h3');
   release_date.id="releasedate";
   let release_dateinfo='Release date: &nbsp'+moviedetails.release_date;
   release_date.innerHTML=release_dateinfo;
+  release_date.style.margin="0";
   release_date.style.paddingLeft="20px";
   release_date.style.fontFamily="Calibri";
   writtendetailssection.appendChild(release_date);
 
-  let ratings=document.createElement('h2');
+  let ratings=document.createElement('h3');
   ratings.id="ratings";
   ratinginfo='Ratings: &nbsp'+moviedetails.ratings;
   ratings.innerHTML=ratinginfo;
   ratings.style.paddingLeft="20px";
+  ratings.style.margin="0";
   ratings.style.fontFamily="Calibri";
   writtendetailssection.appendChild(ratings);
 
-  let story=document.createElement('h2');
+  let story=document.createElement('h3');
   story.id="story";
   storyinfo='Story: &nbsp'+moviedetails.overview;
   story.innerHTML=storyinfo;
   story.style.width="54rem";
+  story.style.margin="0";
   story.style.paddingLeft="20px";
   story.style.fontFamily="Calibri";
   writtendetailssection.appendChild(story);
@@ -81,6 +85,7 @@ window.addEventListener("load",async()=>{
   let yttrailerid=cloudconsoleyoutubetrailerfetching.items[0].id.videoId;
   let youtubetrailerfetchinglink="https://m.youtube.com/watch?v="+yttrailerid;
   let divfortrailermusicreview=document.createElement('div');
+  divfortrailermusicreview.style.margin="0";
   writtendetailssection.appendChild(divfortrailermusicreview);
   let youtubetrailerbutton=document.createElement('button');
 
