@@ -142,6 +142,22 @@ button{
 .navbar-brand{
     font-size: 100px;
 }
+#imagemoving{
+    margin-top: 170px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    animation: slide 25s linear infinite;
+    
+}
+@keyframes slide {
+    0%{
+        margin-left: 100%;
+    }
+    100%{
+        margin-left: -680%;
+    }
+}
 }
 
 
