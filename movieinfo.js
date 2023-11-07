@@ -30,20 +30,21 @@ window.addEventListener("load",async()=>{
   poster.id="poster";
   poster.src=moviedetails.poster;
   poster.height="220";
-  poster.width="170";
+  poster.width="350";
   poster.style.borderRadius="21px";
   moviedetailssection.appendChild(poster);
 
   let writtendetailssection=document.createElement('div');
   writtendetailssection.style.display="flex";
   writtendetailssection.style.flexDirection="column";
-  writtendetailssection.style.padding="0"
+  writtendetailssection.style.padding="0";
 
   let title=document.createElement('h2');
   title.id="title";
-  let titleinfo='Moviename:  &nbsp'+moviedetails.title;
+  let titleinfo=moviedetails.title;
   title.innerHTML=titleinfo;
-  title.style.paddingLeft="20px";
+  // title.style.paddingLeft="10px";
+
   title.style.fontFamily="Calibri";
   writtendetailssection.appendChild(title);
 
@@ -51,8 +52,8 @@ window.addEventListener("load",async()=>{
   release_date.id="releasedate";
   let release_dateinfo='Release date: &nbsp'+moviedetails.release_date;
   release_date.innerHTML=release_dateinfo;
-  release_date.style.margin="0";
-  release_date.style.paddingLeft="20px";
+  // release_date.style.margin="0";
+  // release_date.style.paddingLeft="10px";
   release_date.style.fontFamily="Calibri";
   writtendetailssection.appendChild(release_date);
 
@@ -60,18 +61,18 @@ window.addEventListener("load",async()=>{
   ratings.id="ratings";
   ratinginfo='Ratings: &nbsp'+moviedetails.ratings;
   ratings.innerHTML=ratinginfo;
-  ratings.style.paddingLeft="20px";
-  ratings.style.margin="0";
+  // ratings.style.paddingLeft="10px";
+  // ratings.style.margin="0";
   ratings.style.fontFamily="Calibri";
   writtendetailssection.appendChild(ratings);
 
   let story=document.createElement('h3');
   story.id="story";
-  storyinfo='Story: &nbsp'+moviedetails.overview;
+  storyinfo='Story: &nbsp'+moviedetails.overview ;
   story.innerHTML=storyinfo;
   // story.style.width="54rem";
-  story.style.margin="0";
-  story.style.paddingLeft="20px";
+  // story.style.margin="0";
+  // story.style.paddingLeft="0px";
   story.style.fontFamily="Calibri";
   writtendetailssection.appendChild(story);
   moviedetailssection.appendChild(writtendetailssection);

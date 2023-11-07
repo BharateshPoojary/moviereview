@@ -13,7 +13,7 @@ body::-webkit-scrollbar{
 }
 #poster{
     margin-top: 15px;
-    margin-left: 15px;
+    margin-left: 2px;
     border: 4px solid rgb(69, 81, 69);
 
 }
@@ -52,7 +52,7 @@ nav{
 
 #moviedetails{
     margin-top: 5px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     height: 28rem;
     width:70rem;
     border-radius: 10px;
@@ -185,18 +185,59 @@ li{
    margin-left: 10px;
 }
 #poster{
-    height: 140px;
+    height: 160px;
     width:150px;
 }
 #moviedetails{
     width: auto;
 }
+#title{
+    font-size: medium;
+}
 #story{
-    padding: 10px;
-    margin: 15px;
+    inline-size: 200px;
+   white-space: wrap;
+    font-size: small;
+    /* word-wrap: break-word; */
+    overflow-wrap: break-word;
+    /* text-overflow: clip; */
+}
+#releasedate{
+    font-size: medium;
+}
+#ratings{
+    font-size: medium;
 }
 .trailerbutton{
-    height:30px;
-    width:50px;
+    position: absolute;
+    left:0;
+    margin: 0;
+    margin-left: 57px;
+    height:60px;
+    width:100px;
+    background-size: 30px;
+    font-size: small;
+    padding: 10px 0px 0px 0px;}
+.musicbutton
+{
+    position: absolute;
+    right: 0;
+    margin: 0;
+    margin-right: 7px;
+    height:60px;
+    width:100px;
+    background-size: 30px;
+    font-size: small;
+    padding: 19px 0px 0px 0px;
 }
-}
+.reviewbutton{
+    margin: 0;
+    margin-right: 15px;
+    position: absolute;
+    bottom: 150;
+    height:60px;
+    width:100px;
+    background-size: 30px;
+    font-size: small;
+    padding: 10px 0px 0px 0px;
+}}
