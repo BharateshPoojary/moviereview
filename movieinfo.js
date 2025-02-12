@@ -6,19 +6,14 @@ window.addEventListener("load", async () => {
   navbar.appendChild(ulist);
   let list1 = document.createElement('li');
   list1.id = "list1";
-  let list2 = document.createElement('li');
-  list2.id = "list2";
-  let signin = document.createElement('a');
-  signin.id = "sign";
-  signin.innerHTML = "Signin";
-  signin.href = "signin.html";
+
+
   let home = document.createElement('a');
   home.innerHTML = "Home";
   home.href = "index.html";
   list1.appendChild(home);
-  list2.appendChild(signin);
   ulist.appendChild(list1);
-  ulist.appendChild(list2);
+
   //Accessing moviedetails through localstorage 
   let moviedetails = JSON.parse(localStorage.getItem('moviedetails'));
   let moviedetailssection = document.createElement('div');
